@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airline SignUp</title>
+    <link rel="stylesheet" href="slidestyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #video-background {
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video-background" autoplay loop muted>
+      <source
+        src="/Users/sarthak/Desktop/Airline/images/registration.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form action="registration.php" method="post">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input
+            type="text"
+            name="user_name"
+            placeholder="User name"
+            required=""
+          />
+          <input type="email" name="email" placeholder="E-mail" required="" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required=""
+          />
+          <input
+            type="password"
+            name="confirm_password"
+            placeholder="Confirm Password"
+            required=""
+          />
+          <button class="btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
