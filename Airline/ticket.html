@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="ticket.css" />
+  </head>
+  <body>
+    <div class="ticket">
+      <div class="header">
+        <h1>Airline Ticket</h1>
+      </div>
+      <div class="passenger-info">
+        <p>
+          <strong>Passenger Name:</strong>
+          <?php echo $passengerName; ?>
+        </p>
+        <p>
+          <strong>Booking Reference:</strong>
+          <?php echo $bookingReference; ?>
+        </p>
+      </div>
+      <div class="flight-info">
+        <p>
+          <strong>Flight Number:</strong>
+          <?php echo $flightNumber; ?>
+        </p>
+        <p>
+          <strong>Departure:</strong>
+          <?php echo $departure; ?>
+        </p>
+        <p>
+          <strong>Arrival:</strong>
+          <?php echo $arrival; ?>
+        </p>
+        <p>
+          <strong>Date and Time:</strong>
+          <?php echo $dateTime; ?>
+        </p>
+      </div>
+      <div class="seat-info">
+        <p>
+          <strong>Seat:</strong>
+          <?php echo $seat; ?>
+        </p>
+        <p>
+          <strong>Gate:</strong>
+          <?php echo $gate; ?>
+        </p>
+      </div>
+      <div class="price">
+        <p><strong>Price:</strong> $<?php echo $price; ?></p>
+      </div>
+
+      <!-- Add a Print button -->
+      <button onclick="printTicket()">Print Ticket</button>
+    </div>
+
+    <script>
+      // Function to print the ticket
+      function printTicket() {
+        window.print(); // This will open the browser's print dialog for the current page.
+      }
+    </script>
+  </body>
+</html>
