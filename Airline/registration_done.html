@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .redirect-message {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .redirect-timer {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Animation for a subtle pulse effect */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .redirect-timer {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful</h1>
+        <p>Your registration has been completed successfully.</p>
+        <p class="redirect-message">You will be redirected to the homepage shortly. Please wait...</p>
+        <p class="redirect-timer" id="redirect-timer">5</p>
+    </div>
+    <script>
+        let seconds = 5;
+        function updateTimer() {
+            document.getElementById('redirect-timer').textContent = seconds;
+            if (seconds === 0) {
+                window.location.href = 'index.html';
+            }
+            seconds--;
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
