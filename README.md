@@ -95,5 +95,5 @@ CREATE TABLE users (
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/airline-ticket-booking.git
+   git clone https://github.com/CodeNinjaSarthak/airline-ticket-booking.git
    ```
